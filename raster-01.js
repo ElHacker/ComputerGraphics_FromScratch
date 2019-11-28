@@ -9,8 +9,8 @@ let canvas_pitch = canvas_buffer.width * 4;
 
 
 let PutPixel = (x, y, color) => {
-  x = canvas.width / 2 + x;
-  y = canvas.height / 2 - y - 1;
+  x = canvas.width / 2 + Math.floor(x);
+  y = canvas.height / 2 - Math.floor(y) - 1;
 
   if (x < 0 || x >= canvas.width || y < 0 || y >= canvas.height) {
     return;
